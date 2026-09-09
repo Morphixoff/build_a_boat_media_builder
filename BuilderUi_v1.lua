@@ -412,7 +412,7 @@ ImageBuilder:Button("Start", function()
 
                 building = false
             else
-                print("You dont have enough blocks")
+                game:GetService("StarterGui"):SetCore("SendNotification", {Title="Ошибка!", Text="Недостаточно блоков!"})
             end
         else
             local blocks_value = game.Players.LocalPlayer.Data:FindFirstChild(block_name).Value
@@ -504,6 +504,8 @@ ImageBuilder:Button("Start", function()
                     end
                 end
                 building = false
+            else
+                game:GetService("StarterGui"):SetCore("SendNotification", {Title="Ошибка!", Text="Недостаточно блоков!"})
             end
         end
     else
