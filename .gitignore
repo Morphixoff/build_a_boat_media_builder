@@ -1,0 +1,5 @@
+.venv/
+workspace/
+test.py
+BuilderUiNew.lua
+__pycache__/
