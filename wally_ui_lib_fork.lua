@@ -484,12 +484,14 @@ do
                 Parent = self.container;
             });
             
-            local function UpdateText(new_text)
-                check:FindFirstChild("section_lbl").Text = new_text
+            local function UpdateLabel(text, text_color)
+                local label = check:FindFirstChild("section_lbl")
+                label.Text = text
+                label.TextColor3 = text_color
             end
 
             self:Resize();
-            return UpdateText
+            return UpdateLabel
         end
 
         function types:Slider(name, options, callback)
