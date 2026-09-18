@@ -483,8 +483,13 @@ do
                 });
                 Parent = self.container;
             });
-        
+            
+            local function UpdateText(new_text)
+                check:FindFirstChild("section_lbl").Text = new_text
+            end
+
             self:Resize();
+            return UpdateText
         end
 
         function types:Slider(name, options, callback)
